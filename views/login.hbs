@@ -2,8 +2,10 @@
   <div class="col-md-6 m-auto">
     <div class="card card-body">
       <h1 class="text-center mt-3">Login</h1>
-      {{> message}}
-      <h1>{{{ messages }}}</h1>
+      {{#each messages}}
+        <h1>{{ this }}</h1>
+      {{/each}}
+      <h1>{{ wording }}</h1>
       <form action="/users/login" method="POST" class=" mt-3">
         <div class="form-group">
           <label for="email">Email</label>
